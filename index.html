@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#09090b">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Gryd — AI Video Editor | Portfolio</title>
   <meta name="description" content="Portfolio de edición de video con IA: publicidad, producto y contenido social. Concepto, generación, montaje, sonido y entrega final.">
   <meta property="og:title" content="Gryd — AI Video Editor">
   <meta property="og:description" content="Ideas convertidas en videos que detienen el scroll. Portfolio de edición, dirección visual e IA.">
   <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <meta property="og:url" content="https://gryd-ai-video-editor.vercel.app/">
+  <meta property="og:image" content="https://gryd-ai-video-editor.vercel.app/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portfolio de Gryd, editor de video con IA">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://gryd-ai-video-editor.vercel.app/">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -52,14 +57,14 @@
 
       <div class="hero__reel reveal" aria-label="Muestra destacada del portfolio">
         <div class="hero__reel-frame">
-          <video src="videos/gryd-rd.mp4#t=0.5" muted loop playsinline autoplay preload="metadata" aria-label="Vista previa de Gryd RD"></video>
+          <video src="videos/joako.mp4#t=0.5" poster="posters/joako.jpg" muted playsinline preload="none" aria-label="Vista previa del proyecto Joako"></video>
           <div class="hero__reel-shade"></div>
-          <div class="hero__reel-top"><span>SELECTED WORK</span><span>03 / 04</span></div>
-          <button class="hero__play" type="button" data-open-video="videos/gryd-rd.mp4" data-title="Gryd RD — Reel de producto" data-meta="Producto tech · Dirección de arte, ritmo, tipografía y edición" aria-label="Reproducir proyecto Gryd RD">
+          <div class="hero__reel-top"><span>SELECTED WORK</span><span>01 / 06</span></div>
+          <button class="hero__play" type="button" data-open-video="videos/joako.mp4" data-title="Joako — Pieza audiovisual" data-meta="Edición · Dirección visual · IA · Sound design" aria-label="Reproducir proyecto Joako">
             <span aria-hidden="true">▶</span> Play full video
           </button>
         </div>
-        <p class="hero__reel-caption">Gryd RD — Tech product reel <span>AI + EDIT</span></p>
+        <p class="hero__reel-caption">Joako — Pieza audiovisual <span>AI + EDIT</span></p>
       </div>
     </section>
 
@@ -73,46 +78,82 @@
       <div class="section__head reveal">
         <div>
           <p class="eyebrow">01 / TRABAJO SELECCIONADO</p>
-          <h2>Cuatro proyectos.<br><span>Cuatro lenguajes.</span></h2>
+          <h2>Seis proyectos.<br><span>Distintos lenguajes.</span></h2>
         </div>
         <p>Todos fueron realizados de punta a punta por mí. Abrí cada pieza para verla con sonido.</p>
       </div>
 
       <div class="works">
         <article class="work work--tall reveal">
+          <button class="work__open" type="button" data-open-video="videos/joako.mp4" data-title="Joako — Pieza audiovisual" data-meta="Edición · Dirección visual · IA · Sound design" aria-label="Ver proyecto Joako">
+            <span class="work__media"><video src="videos/joako.mp4#t=0.5" poster="posters/joako.jpg" preload="none" muted playsinline loop></video><span class="work__overlay"><span class="work__index">01</span><span class="work__play" aria-hidden="true">▶</span></span></span>
+            <span class="work__info"><span><b>Joako</b><small>Pieza audiovisual</small></span><span class="work__tags">EDIT · VISUAL · AI</span></span>
+          </button>
+        </article>
+
+        <article class="work work--tall reveal">
           <button class="work__open" type="button" data-open-video="videos/crossby.mp4" data-title="Crossby — Intro / promo" data-meta="Producto premium · Concepto, dirección visual, IA, edición y sonido" aria-label="Ver Crossby — Intro / promo">
-            <span class="work__media"><video src="videos/crossby.mp4#t=0.5" preload="metadata" muted playsinline loop></video><span class="work__overlay"><span class="work__index">01</span><span class="work__play" aria-hidden="true">▶</span></span></span>
+            <span class="work__media"><video src="videos/crossby.mp4#t=0.5" poster="posters/crossby.jpg" preload="none" muted playsinline loop></video><span class="work__overlay"><span class="work__index">02</span><span class="work__play" aria-hidden="true">▶</span></span></span>
             <span class="work__info"><span><b>Crossby</b><small>Intro / promo</small></span><span class="work__tags">PRODUCTO · LUJO · AI</span></span>
           </button>
         </article>
 
         <article class="work reveal">
           <button class="work__open" type="button" data-open-video="videos/spotpubli.mp4" data-title="Spot publicitario — 30s" data-meta="Negocio local · Concepto, visuales 3D, montaje y acabado final" aria-label="Ver spot publicitario de 30 segundos">
-            <span class="work__media"><video src="videos/spotpubli.mp4#t=0.5" preload="metadata" muted playsinline loop></video><span class="work__overlay"><span class="work__index">02</span><span class="work__play" aria-hidden="true">▶</span></span></span>
+            <span class="work__media"><video src="videos/spotpubli.mp4#t=0.5" poster="posters/spotpubli.jpg" preload="none" muted playsinline loop></video><span class="work__overlay"><span class="work__index">03</span><span class="work__play" aria-hidden="true">▶</span></span></span>
             <span class="work__info"><span><b>Spot publicitario</b><small>Campaña de 30 segundos</small></span><span class="work__tags">LOCAL · 3D · AD</span></span>
           </button>
         </article>
 
+        <article class="work work--collection reveal">
+          <div class="collection__head"><div><span class="work__index">04</span><h3>Colección de joyas</h3></div><span class="work__tags">JEWELRY · PRODUCT · AI</span></div>
+          <div class="collection__grid">
+            <button class="work__open" type="button" data-open-video="videos/joya-dije-luna.mp4" data-title="Dije Luna — Giro 360°" data-meta="Joyería · Producto · Movimiento y acabado" aria-label="Ver Dije Luna">
+              <span class="work__media"><video src="videos/joya-dije-luna.mp4#t=0.5" poster="posters/joya-dije-luna.jpg" preload="none" muted playsinline loop></video><span class="work__overlay"><span class="work__play" aria-hidden="true">▶</span></span></span>
+              <span class="work__info"><span><b>Dije Luna</b><small>Giro 360°</small></span></span>
+            </button>
+            <button class="work__open" type="button" data-open-video="videos/joya-garra-escultorica.mp4" data-title="Garra escultórica — Giro 360°" data-meta="Joyería · Producto · Movimiento y acabado" aria-label="Ver Garra escultórica">
+              <span class="work__media"><video src="videos/joya-garra-escultorica.mp4#t=0.5" poster="posters/joya-garra-escultorica.jpg" preload="none" muted playsinline loop></video><span class="work__overlay"><span class="work__play" aria-hidden="true">▶</span></span></span>
+              <span class="work__info"><span><b>Garra escultórica</b><small>Giro 360°</small></span></span>
+            </button>
+          </div>
+        </article>
+
         <article class="work reveal">
           <button class="work__open" type="button" data-open-video="videos/gryd-rd.mp4" data-title="Gryd RD — Reel de producto" data-meta="Producto tech · Dirección de arte, ritmo, tipografía y edición" aria-label="Ver reel de producto Gryd RD">
-            <span class="work__media"><video src="videos/gryd-rd.mp4#t=0.5" preload="metadata" muted playsinline loop></video><span class="work__overlay"><span class="work__index">03</span><span class="work__play" aria-hidden="true">▶</span></span></span>
+            <span class="work__media"><video src="videos/gryd-rd.mp4#t=0.5" poster="posters/gryd-rd.jpg" preload="none" muted playsinline loop></video><span class="work__overlay"><span class="work__index">05</span><span class="work__play" aria-hidden="true">▶</span></span></span>
             <span class="work__info"><span><b>Gryd RD</b><small>Reel de producto</small></span><span class="work__tags">TECH · SOCIAL · AI</span></span>
           </button>
         </article>
 
         <article class="work work--tall reveal">
           <button class="work__open" type="button" data-open-video="videos/maniking.mp4" data-title="MonKing — Spot de producto" data-meta="Food / snack · Concepto, composición IA, montaje y sound design" aria-label="Ver spot de producto MonKing">
-            <span class="work__media"><video src="videos/maniking.mp4#t=0.5" preload="metadata" muted playsinline loop></video><span class="work__overlay"><span class="work__index">04</span><span class="work__play" aria-hidden="true">▶</span></span></span>
+            <span class="work__media"><video src="videos/maniking.mp4#t=0.5" poster="posters/maniking.jpg" preload="none" muted playsinline loop></video><span class="work__overlay"><span class="work__index">06</span><span class="work__play" aria-hidden="true">▶</span></span></span>
             <span class="work__info"><span><b>MonKing</b><small>Spot de producto</small></span><span class="work__tags">FOOD · PRODUCT · AD</span></span>
           </button>
         </article>
       </div>
     </section>
 
+    <section class="section container wip" id="en-proceso">
+      <div class="wip__card reveal">
+        <div class="wip__visual" aria-label="Espacio reservado para el adelanto de El Barrio">
+          <span>WORK IN PROGRESS</span>
+          <strong>PRÓXIMAMENTE</strong>
+        </div>
+        <div class="wip__copy">
+          <p class="eyebrow">02 / EN PROCESO</p>
+          <h2>El Barrio</h2>
+          <p>Una exploración audiovisual sobre identidad, personajes y atmósfera urbana. Actualmente en desarrollo.</p>
+          <span class="wip__status"><i></i> Adelanto en preparación</span>
+        </div>
+      </div>
+    </section>
+
     <section class="section profile" id="perfil">
       <div class="container profile__grid">
         <div class="profile__intro reveal">
-          <p class="eyebrow">02 / QUÉ APORTO</p>
+          <p class="eyebrow">03 / QUÉ APORTO</p>
           <h2>Un editor que también piensa la idea.</h2>
           <p>No uso IA como atajo visual. La integro a una decisión creativa: qué mostrar, cuándo cortar, cómo sostener atención y qué tiene que sentir quien mira.</p>
           <a href="mailto:tosellivallejo@gmail.com?subject=Oportunidad%20remota%20de%20video" class="text-link">Consultar disponibilidad <span aria-hidden="true">↗</span></a>
@@ -128,7 +169,7 @@
 
     <section class="section container" id="proceso">
       <div class="section__head reveal">
-        <div><p class="eyebrow">03 / WORKFLOW</p><h2>Proceso visible.<br><span>Menos fricción.</span></h2></div>
+        <div><p class="eyebrow">04 / WORKFLOW</p><h2>Proceso visible.<br><span>Menos fricción.</span></h2></div>
         <p>Un flujo simple para cuidar la idea y evitar correcciones tardías.</p>
       </div>
       <ol class="process">
@@ -141,7 +182,7 @@
 
     <section class="section container" id="contacto">
       <div class="contact reveal">
-        <p class="eyebrow">04 / CONTACTO</p>
+        <p class="eyebrow">05 / CONTACTO</p>
         <h2>¿Tu próximo video<br>necesita <em>algo distinto?</em></h2>
         <p>Estoy disponible para posiciones remotas, proyectos freelance y colaboraciones con agencias.</p>
         <div class="contact__actions"><a class="btn btn--primary" href="mailto:tosellivallejo@gmail.com?subject=Hablemos%20de%20video">Escribime por email <span aria-hidden="true">↗</span></a><button class="copy-email" type="button" data-copy="tosellivallejo@gmail.com">Copiar email</button></div>
@@ -151,7 +192,9 @@
   </main>
 
   <footer class="footer container">
-    <a href="#top" class="nav__logo">GRYD<span>.</span></a><p>AI VIDEO EDITOR · ARGENTINA / REMOTE</p><p>© 2026</p>
+    <a href="#top" class="nav__logo">GRYD<span>.</span></a>
+    <p>AI VIDEO EDITOR · ARGENTINA / REMOTE</p>
+    <div class="footer__legal"><a href="/privacidad">Privacidad y cookies</a><p>© 2026</p></div>
   </footer>
 
   <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lightbox-title">

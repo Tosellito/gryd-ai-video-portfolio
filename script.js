@@ -55,6 +55,20 @@ const lightboxMeta = document.getElementById("lightbox-meta");
 const closeButton = lightbox.querySelector(".lightbox__close");
 let previousFocus = null;
 
+function keepFocusInsideLightbox(event) {
+  if (event.key !== "Tab" || lightbox.hidden) return;
+  const focusable = [...lightbox.querySelectorAll("button, video[controls]")];
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
 function openLightbox(trigger) {
   previousFocus = trigger;
   lightboxVideo.src = trigger.dataset.openVideo;
@@ -78,7 +92,10 @@ function closeLightbox() {
 document.querySelectorAll("[data-open-video]").forEach((trigger) => trigger.addEventListener("click", () => openLightbox(trigger)));
 closeButton.addEventListener("click", closeLightbox);
 lightbox.addEventListener("click", (event) => { if (event.target === lightbox) closeLightbox(); });
-document.addEventListener("keydown", (event) => { if (event.key === "Escape" && !lightbox.hidden) closeLightbox(); });
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
+  keepFocusInsideLightbox(event);
+});
 
 const copyButton = document.querySelector(".copy-email");
 copyButton.addEventListener("click", async () => {

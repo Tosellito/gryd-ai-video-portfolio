@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gryd-ai-video-editor.vercel.app/sitemap.xml
